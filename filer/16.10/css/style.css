@@ -1,3 +1,136 @@
 body{
-    background-color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header, main, footer{
+    padding: 1rem;
+}
+
+header{
+    font-size: 1.5rem;
+    font-weight: 600;
+    grid-area: header;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between; 
+    position: relative; 
+}
+
+header nav div{
+    display: flex;
+    gap: 1rem;
+}
+
+#logo{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar{
+    display: none;
+}
+
+.responsive{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 40px;
+}
+
+.responsive a{
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.black-btn{
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #171717;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+main{
+    grid-area: main;
+}
+
+main section img{
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#services{
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    padding: 1rem;
+     justify-content: space-around;
+}
+
+@media only screen and (min-width:600px){
+    #grid-container{
+        grid-template-areas: "header header header" ". main ." "footer footer footer";
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
+        margin: 0
+    }
+
+    #ham, #search-glass{
+        display: none;
+    }
+
+    .felx-section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #services h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    #services article{
+        max-width: 300px;
+        width: 100%;
+        min-width: 200px;
+    }
+
+    .felx-section img{
+        width: 50%;
+    }
+    .felx-section{
+        padding: 1rem;
+        width: 40%;
+        align-self: center;
+    }
+
+    .right img{
+        order: 1;
+    }
 }

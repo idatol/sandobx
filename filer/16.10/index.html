@@ -4,17 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widt, initial-scale=1.0">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="tex/css">
+        <link href="css/font/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+        <link href="css/font/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <title>Bolleopskrifter</title>
     </head>
     <body>
+        <div id="grid-container">
         <header>
             <nav>
                 <a href="#" id="logo">LOGO</a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About</a></li>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass" id="search-glass"></i>
+                    <i class="fa-solid fa-bars" id="ham"></i>
+                </div>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#services">Services</a></li>
                 </ul>
             </nav>
             <section>
@@ -23,34 +31,53 @@
             </section>
         </header>
         <main>
-            <section>
-                <img src="#" alt="">
-                <h2>Did you hear that?</h2>
-                <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time</p>
+            <section class="felx-section">
+                <img src="https://placehold.co/600x400" alt="Grå placholder bilde">
+                <section>
+                    <h2>Did you hear that?</h2>
+                    <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time</p>
+                </section>
             </section>
-            <section>
-                <img src="#" alt="">
-                <h2>Did you hear that?</h2>
-                <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time</p>
+            <section class="felx-section right">
+                <img src="https://placehold.co/600x400" alt="Grå placholder bilde">
+                <section>
+                    <h2>Did you hear that?</h2>
+                    <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure. This is madness! We're doomed! There'll be no escape for the Princess this time</p>
+                </section>
             </section>
-            <section>
+            <section id="services">
                 <h2>Services</h2>
                 <article>
                     <h3>Did you hear that?</h3>
-                    <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.</p>
+                    <p>Did you hear that? They've shut down the main reactor.</p>
                 </article>
                 <article>
                     <h3>Did you hear that?</h3>
-                    <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.</p>
+                    <p>Did you hear that? They've shut down the main reactor.</p>
                 </article>
                 <article>
                     <h3>Did you hear that?</h3>
-                    <p>Did you hear that? They've shut down the main reactor. We'll be destroyed for sure.</p>
+                    <p>Did you hear that? They've shut down the main reactor.</p>
                 </article>
             </section>
         </main>
         <footer>
 
         </footer>
+        </div>
+        <script>
+
+            let ham = document.getElementById("ham")
+            let x = document.querySelector(".navbar")
+
+            document.getElementById("ham").addEventListener("click", ()=>{
+                if (x.className === "navbar"){
+                    x.className += " responsive";
+                } else{
+                    x.className = "navbar"
+                }
+            })
+
+        </script>
     </body>
 </html>
